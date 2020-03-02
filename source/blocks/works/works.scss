@@ -1,0 +1,253 @@
+.works {
+  padding-bottom: 35px;
+  background-color: #f8f5f2;
+
+  &::after {
+    background-image: url("../img/angle-light.svg");
+  }
+}
+
+.works__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.works__item {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: inset 0 0 0px 1px #e5ddd5;
+
+  &--work-of-month {
+    position: relative;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.works__img-wrapper {
+  position: relative;
+  margin: 0;
+  font-size: 0;
+  text-align: center;
+  background-color: #e6ded6;
+}
+
+.works__item--work-of-month .works__img-wrapper::before {
+  position: absolute;
+  content: "";
+  bottom: 30px;
+  left: 0;
+  width: 176px;
+  height: 50px;
+  background-image: url("../img/work-of-month.png");
+  background-repeat: no-repeat;
+  background-size: 176px 50px;
+
+  @media (min-resolution: $retina-dpi),
+         (min-resolution: $retina-dppx) {
+    background-image: url("../img/work-of-month@2x.png");
+  }
+}
+
+.works__review {
+  @include wrapper();
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.works__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: left;
+  font-weight: bold;
+  color: #000000;
+}
+
+.works__text {
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-style: normal;
+  color: #000000;
+}
+
+.works__parameter-list {
+  @include row-flex();
+
+  padding: 0;
+  list-style-type: none;
+}
+
+.works__parameter-item {
+  position: relative;
+  margin-top: 15px;
+  margin-right: 35px;
+  padding-left: 35px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  &--haircut::before {
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/haircut.svg");
+  }
+
+  &--beard::before {
+    width: 23px;
+    height: 21px;
+    background-image: url("../img/beard.svg");
+  }
+
+  &--mustache::before {
+    width: 45px;
+    height: 12px;
+    top: 3px;
+    left: -10px;
+    background-image: url("../img/mustache.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .works {
+    padding-bottom: 65px;
+  }
+
+  .works__wrapper {
+    @include wrapper();
+  }
+
+  .works__item {
+    @include row-flex();
+
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .works__image {
+    max-width: unset;
+  }
+
+  .works__review {
+    @include row-flex();
+    @include col();
+    @include size(6);
+
+    padding: 0;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+  }
+
+  .works__title {
+    line-height: 34px;
+  }
+
+  .works__text {
+    width: 100%;
+  }
+
+  .works__parameter-list {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .works {
+    padding-bottom: 90px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .works__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .works__item {
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 294px;
+    margin-right: 0;
+    margin-left: 0;
+
+    &:first-child {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+
+    &--work-of-month {
+      position: relative;
+    }
+  }
+
+  .works__img-wrapper {
+    position: static;
+    margin-right: 0;
+  }
+
+  .works__item--work-of-month .works__parameter-item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .works__item--work-of-month .works__img-wrapper::before {
+    top: 25px;
+    right: 0;
+    left: auto;
+    background-image: url(../img/work-of-month-2.png);
+
+    @media (min-resolution: $retina-dpi),
+           (min-resolution: $retina-dppx) {
+      background-image: url("../img/work-of-month-2@2x.png");
+    }
+  }
+
+  .works__review {
+    flex-grow: 1;
+    width: 295px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 35px;
+  }
+
+  .works__item--work-of-month .works__review {
+    @include size(6);
+
+    padding-top: 125px;
+    padding-right: 130px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+  }
+
+  .works__text {
+    padding-bottom: 10px;
+  }
+}
+
+
+
+

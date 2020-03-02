@@ -1,0 +1,150 @@
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 60px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: normal;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e5ddd5;
+    background-color: #ffffff;
+  }
+
+  &:hover::before {
+  border: 1px solid #d5c9bd;
+  }
+
+  &:active::before {
+  background-color: #d5c9bd;
+  }
+
+  &:focus-within {
+    outline-color: rgb(77, 144, 254);
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
+  }
+}
+
+.checkbox__indicator {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 7px;
+  width: 22px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + .checkbox__indicator {
+  background-image: url("../img/checkbox-mark.svg");
+}
+
+.radio {
+  display: inline-block;
+  position: relative;
+  padding-top: 65px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e5ddd5;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+  }
+
+  &:hover::before {
+    border: 1px solid #d5c9bd;
+  }
+
+  &:active::before {
+    border: none;
+    background-color: #d5c9bd;
+  }
+}
+
+input[type="radio"]:checked + .radio__indicator {
+  position: absolute;
+  content: "";
+  top: 16px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+.radio:hover input[type="radio"]:checked + .radio__indicator {
+  border: 1px solid #d5c9bd;
+}
+
+input[type="radio"]:checked + .radio:hover:after,
+input[type="radio"]:checked + .radio:hover:focus {
+  border: 1px solid #d5c9bd;
+}
+
+input[type="radio"]:checked + .radio:active::after {
+  background-color: #d5c9bd;
+}
+
+input,
+textarea {
+  padding: 9px 20px;
+  border: 1px solid #e5ddd5;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #d5c9bd;
+  }
+
+  &:active {
+    border: 1px solid #999999;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  input,
+  textarea {
+    padding: 20px 25px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .checkbox {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .radio {
+    padding-top: 80px;
+    font-size: 24px;
+  }
+}

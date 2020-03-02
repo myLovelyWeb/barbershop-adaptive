@@ -1,0 +1,283 @@
+.stats {
+  background-color: #353535;
+}
+
+.stats__header {
+  @include wrapper();
+
+  padding-top: 30px;
+  padding-bottom: 25px;
+  background-color: #ffffff;
+}
+
+.stats__slogan {
+  display: block;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.stats__intro {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 27px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.stats__legend {
+  display: block;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: normal;
+
+  &--top {
+    display: none;
+  }
+
+  &--bottom {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #292929;
+  }
+}
+
+.stats__legend sup {
+  top: 0;
+  left: 0;
+  font-size: 23px;
+}
+
+.stats__list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats__list tbody {
+  @include row-flex();
+}
+
+.stats__list tr {
+  @include row-flex();
+  @include col();
+  @include size(12);
+  padding: 20px;
+  background-color: #404040;
+
+  &:nth-child(2) {
+    background-color: #4e4e4e;
+  }
+
+  &:nth-child(3) {
+    background-color: #353535;
+  }
+
+  &:nth-child(4) {
+    background-color: #404040;
+  }
+}
+
+.stats__value,
+.stats__field {
+  vertical-align: top;
+  width: 50%;
+  color: #ffffff;
+}
+
+.stats__value {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.stats__special {
+  position: relative;
+}
+
+.stats__special sup {
+  position: absolute;
+  top: 14px;
+  right: -10px;
+  font-size: 24px;
+}
+
+.stats__field {
+  padding-left: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .stats__wrapper {
+    @include wrapper();
+
+    margin-top: -182px;
+  }
+
+  .stats__header {
+    @include row-flex();
+
+    justify-content: space-between;
+    position: relative;
+    min-height: 129px;
+    padding-top: 32px;
+    padding-right: 0;
+    padding-bottom: 32px;
+    padding-left: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 27px;
+      left: -14px;
+      border: 15px solid transparent;
+      border-bottom-color: #ffffff;
+      transform: rotate(45deg);
+    }
+  }
+
+  .stats__slogan {
+    @include col();
+    @include size(6);
+
+    margin-bottom: 18px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-transform: none;
+  }
+
+  .stats__intro {
+    @include col();
+    @include size(6);
+
+    margin-top: 5px;
+    padding-right: 32px;
+    padding-left: 32px;
+    text-align: left;
+  }
+
+  .stats__legend--top {
+    @include col();
+
+    display: block;
+    padding-left: 40px;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .stats__legend--bottom {
+    display: none;
+  }
+
+  .stats__list {
+    display: flex;
+  }
+
+  .stats__list tr {
+    @include size(6);
+
+    padding-top: 25px;
+    padding-right: 40px;
+    padding-bottom: 28px;
+    padding-left: 40px;
+  }
+
+  .stats__list td {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .stats__value {
+    margin-bottom: 7px;
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .stats__special sup {
+    top: 22px;
+    right: -20px;
+    font-size: 40px;
+  }
+
+  .stats__field {
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left;
+  }
+
+  .stats__field br {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .stats__wrapper {
+    @include row-flex();
+    @include wrapper();
+
+    margin-top: -161px;
+  }
+
+  .stats__header {
+    @include col();
+    @include size(4);
+
+    padding-right: 55px;
+    padding-left: 40px;
+
+    &::before {
+      top: 22px;
+    }
+  }
+
+  .stats__slogan {
+    @include size(12);
+
+    margin-bottom: 42px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .stats__intro {
+    @include size(12);
+
+    margin-bottom: 32px;
+    padding: 0;
+  }
+
+  .stats__legend--top {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .stats__list {
+    @include col();
+    @include size(8);
+
+    min-width: 640px;
+  }
+}
+

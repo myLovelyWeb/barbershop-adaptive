@@ -1,0 +1,83 @@
+.user-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.user-menu__link {
+    display: block;
+    position: relative;
+    padding: 13px 21px;
+    padding-left: 49px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.user-menu__login-icon {
+  position: absolute;
+  top: 46%;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  opacity: 0.3;
+  fill: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .user-menu__link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 0;
+  }
+
+  .user-menu__link:hover > svg {
+    fill: #826550;
+    opacity: 1;
+  }
+
+  .user-menu__link:active > svg {
+    fill: rgba(240, 240, 240, 0.3);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-menu__link {
+    padding-left: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+
+      & svg {
+        opacity: 0.3;
+        fill: #000000;
+      }
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+
+      & svg {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  .user-menu__login-icon {
+    top: 47%;
+    left: 27px;
+  }
+}

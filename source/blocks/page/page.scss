@@ -1,0 +1,96 @@
+.page {
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.page__top-panel {
+  background-color: #f8f5f2;
+}
+
+.page__title-wrapper {
+  @include wrapper();
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.page__title {
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.page__title-wrapper > .btn {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page--inner .page-header__logo {
+    position: relative;
+    height: 214px;
+    background-position: center -227px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      height: 45px;
+      background-image: url("../img/transparent-angle.svg");
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+  }
+
+  .page__title-wrapper {
+    @include row-flex();
+
+    justify-content: space-between;
+    padding-top: 55px;
+    padding-bottom: 40px;
+  }
+
+  .page__title-wrapper > .btn {
+    display: block;
+  }
+
+  .page__title {
+    padding: 0;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .works__item--work-of-month .works__img-wrapper::before {
+    top: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__title-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .page--inner .page-header__logo {
+    height: 307px;
+    background-position: center -72px;
+  }
+
+  .page-header__logo--inner-page::after {
+    height: 65px;
+  }
+
+  .page-main__wrapper {
+    margin-bottom: 80px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+

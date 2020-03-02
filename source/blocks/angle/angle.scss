@@ -1,0 +1,29 @@
+.angle {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -34px;
+    right: 0;
+    left: 0;
+    height: 35px;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    z-index: 2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .angle::after {
+    bottom: -45px;
+    height: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .angle::after {
+    bottom: -54px;
+    height: 55px;
+  }
+}

@@ -1,0 +1,19 @@
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__toggle {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 1px solid #353535;
+  background-color: transparent;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.slider__toggle--active {
+  background-color: #353535;
+}

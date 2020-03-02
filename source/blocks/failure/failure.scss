@@ -1,0 +1,43 @@
+.failure {
+  width: 320px;
+  min-height: 317px;
+  padding: 55px 55px 45px 55px;
+  background-color: #ffffff;
+}
+
+.failure__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.failure__text {
+  margin: 0;
+  padding: 0 25px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #000000;
+}
+
+.failure__btn {
+  padding: 13px;
+  margin-top: 35px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .failure {
+    width: 460px;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}

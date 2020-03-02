@@ -1,0 +1,72 @@
+.btn {
+  font-family: "PT Sans Narrow",sans-serif;
+  cursor: pointer;
+}
+
+.ghost-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #e5ddd5;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: transparent;
+}
+
+.ghost-btn--for-light-bg {
+  &:hover {
+    border: 1px solid #d5c9bd;
+  }
+
+  &:active {
+    border: 1px solid transparent;
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5c9bd;
+  }
+}
+
+.ghost-btn--for-dark-bg {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+
+  &:hover {
+    border: 1px solid #545454;
+  }
+
+  &:active {
+    border: 1px solid #252525;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #252525;
+  }
+}
+
+.huge-btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  font-size: 24px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #826550;
+
+  &:hover {
+    background-color: #6a4d38;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #aeaeae;
+  }
+}

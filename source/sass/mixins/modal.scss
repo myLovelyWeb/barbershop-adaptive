@@ -1,0 +1,13 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+
+.modal--show {
+  display: block;
+}
