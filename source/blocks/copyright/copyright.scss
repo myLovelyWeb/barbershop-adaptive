@@ -1,8 +1,8 @@
 .copyright {
-  @include wrapper();
-
   width: 100%;
+  padding-right: 20px;
   padding-bottom: 25px;
+  padding-left: 20px;
 }
 
 .copyright__text {
@@ -24,10 +24,7 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .copyright {
-    margin-right: 0;
-    margin-left: 0;
     padding: 0;
   }
 

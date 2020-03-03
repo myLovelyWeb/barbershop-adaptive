@@ -161,6 +161,7 @@
 
   .news__wrapper {
     @include row-flex();
+    @include wrapper();
 
     justify-content: space-between;
   }
@@ -200,15 +201,10 @@
 
 @media (min-width: $desktop-width) {
   .news {
-    @include row-flex();
-
-    justify-content: center;
     padding-top: 115px;
   }
 
   .news__wrapper {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 

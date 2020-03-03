@@ -12,9 +12,11 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    @include row-flex();
-
     background-color: #000000;
+  }
+
+  .page-header__wrapper {
+    @include row-flex();
   }
 
   .page-header__logo {

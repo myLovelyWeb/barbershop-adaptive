@@ -727,6 +727,38 @@ textarea {
   font-weight: normal;
   text-align: right; }
 
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.slider__toggle {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 1px solid #353535;
+  background-color: transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer; }
+
+.slider__toggle--active {
+  background-color: #353535; }
+
+.angle {
+  position: relative; }
+  .angle::after {
+    position: absolute;
+    content: "";
+    bottom: -34px;
+    right: 0;
+    left: 0;
+    height: 35px;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    z-index: 2; }
+
 .advantages {
   background-color: #292929; }
   .advantages::after {
@@ -810,38 +842,6 @@ textarea {
   font-style: normal;
   font-weight: normal;
   color: #f8f5f2; }
-
-.angle {
-  position: relative; }
-  .angle::after {
-    position: absolute;
-    content: "";
-    bottom: -34px;
-    right: 0;
-    left: 0;
-    height: 35px;
-    background-repeat: no-repeat;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    z-index: 2; }
-
-.slider__list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.slider__toggle {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border: 1px solid #353535;
-  background-color: transparent;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  cursor: pointer; }
-
-.slider__toggle--active {
-  background-color: #353535; }
 
 .news {
   padding-top: 70px;
@@ -1155,12 +1155,10 @@ textarea {
     opacity: 0.3; }
 
 .copyright {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
   width: 100%;
-  padding-bottom: 25px; }
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px; }
 
 .copyright__text {
   display: block;
@@ -1665,9 +1663,6 @@ textarea {
     .reviews__wrapper {
       padding-left: 20px;
       padding-right: 20px; }
-    .copyright {
-      padding-left: 20px;
-      padding-right: 20px; }
     .works__review {
       padding-left: 20px;
       padding-right: 20px; }
@@ -1695,9 +1690,6 @@ textarea {
       padding-left: 64px;
       padding-right: 64px; }
     .reviews__wrapper {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .copyright {
       padding-left: 64px;
       padding-right: 64px; }
     .works__review {
@@ -1755,12 +1747,13 @@ textarea {
   .works__item--work-of-month .works__img-wrapper::before {
     top: 35px; }
   .page-header {
+    background-color: #000000; }
+  .page-header__wrapper {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     margin-left: 0px;
-    margin-right: 0px;
-    background-color: #000000; }
+    margin-right: 0px; }
   .page-header__logo {
     -webkit-box-ordinal-group: 2;
             order: 1;
@@ -1778,11 +1771,7 @@ textarea {
     margin: 0 auto;
     margin-top: 40px; }
   .main-nav {
-    box-sizing: border-box;
-    word-wrap: break-word;
-    margin-left: 0px;
-    margin-right: 0px;
-    width: calc(100% - 0px);
+    width: 100%;
     background-color: #000000; }
   .main-nav__wrapper {
     display: -webkit-box;
@@ -1934,6 +1923,9 @@ textarea {
     text-align: left; }
   .stats__field br {
     display: none; }
+  .angle::after {
+    bottom: -44px;
+    height: 45px; }
   .advantages {
     background-color: #353535; }
     .advantages::after {
@@ -1964,9 +1956,6 @@ textarea {
     text-align: left; }
   .advantages__description {
     text-align: left; }
-  .angle::after {
-    bottom: -45px;
-    height: 45px; }
   .news {
     padding-top: 85px; }
   .news__wrapper {
@@ -1975,6 +1964,10 @@ textarea {
     flex-wrap: wrap;
     margin-left: 0px;
     margin-right: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 120px;
     -webkit-box-pack: justify;
             justify-content: space-between; }
   .news__title {
@@ -2044,7 +2037,7 @@ textarea {
   .reviews__item {
     min-height: 160px;
     padding-top: 35px;
-    padding-right: 7.40%;
+    padding-right: 40px;
     padding-bottom: 35px;
     padding-left: 140px; }
   .reviews__author-picture {
@@ -2144,8 +2137,6 @@ textarea {
     margin-top: 50px;
     margin-bottom: 0; }
   .copyright {
-    margin-right: 0;
-    margin-left: 0;
     padding: 0; }
   .copyright__ghost-btn {
     padding-right: 30px;
@@ -2364,6 +2355,9 @@ textarea {
     .stats__wrapper {
       padding-left: 20px;
       padding-right: 20px; }
+    .news__wrapper {
+      padding-left: 20px;
+      padding-right: 20px; }
     .page-footer__wrapper {
       padding-left: 20px;
       padding-right: 20px; }
@@ -2376,6 +2370,9 @@ textarea {
       padding-left: 64px;
       padding-right: 64px; }
     .stats__wrapper {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .news__wrapper {
       padding-left: 64px;
       padding-right: 64px; }
     .page-footer__wrapper {
@@ -2402,9 +2399,6 @@ textarea {
       padding-left: 120px;
       padding-right: 120px; }
     .reviews__wrapper {
-      padding-left: 120px;
-      padding-right: 120px; }
-    .copyright {
       padding-left: 120px;
       padding-right: 120px; }
     .works__review {
@@ -2515,12 +2509,10 @@ textarea {
     margin-right: 0px;
     width: calc(66.66667% - 0px);
     min-width: 640px; }
+  .angle::after {
+    bottom: -53px;
+    height: 55px; }
   .advantages {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 0px;
-    margin-right: 0px;
     -webkit-box-pack: center;
             justify-content: center; }
   .advantages__list {
@@ -2546,22 +2538,9 @@ textarea {
     text-align: center; }
   .advantages__description {
     text-align: center; }
-  .angle::after {
-    bottom: -54px;
-    height: 55px; }
   .news {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 0px;
-    margin-right: 0px;
-    -webkit-box-pack: center;
-            justify-content: center;
     padding-top: 115px; }
   .news__wrapper {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
     -webkit-box-pack: justify;
             justify-content: space-between; }
   .news__title {
@@ -2572,14 +2551,14 @@ textarea {
     .news__item:nth-child(n+3) {
       display: block; }
   .reviews {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 0px;
-    margin-right: 0px;
     -webkit-box-pack: center;
             justify-content: center;
     padding-bottom: 100px; }
+  .reviews__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 120px; }
   .reviews__title {
     padding-left: 70px; }
   .reviews__list {
@@ -2775,6 +2754,9 @@ textarea {
     .stats__wrapper {
       padding-left: 120px;
       padding-right: 120px; }
+    .news__wrapper {
+      padding-left: 120px;
+      padding-right: 120px; }
     .page-footer__wrapper {
       padding-left: 120px;
       padding-right: 120px; }
@@ -2785,15 +2767,24 @@ textarea {
 @media screen and (min-width: 1200px) and (min-width: 320px) {
     .stats__wrapper {
       padding-left: 20px;
+      padding-right: 20px; }
+    .reviews__wrapper {
+      padding-left: 20px;
       padding-right: 20px; } }
 
 @media screen and (min-width: 1200px) and (min-width: 768px) {
     .stats__wrapper {
       padding-left: 64px;
+      padding-right: 64px; }
+    .reviews__wrapper {
+      padding-left: 64px;
       padding-right: 64px; } }
 
 @media screen and (min-width: 1200px) and (min-width: 1200px) {
     .stats__wrapper {
+      padding-left: 120px;
+      padding-right: 120px; }
+    .reviews__wrapper {
       padding-left: 120px;
       padding-right: 120px; } }
 
