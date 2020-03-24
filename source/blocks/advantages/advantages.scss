@@ -8,9 +8,7 @@
 
 .advantages__list {
   @include wrapper();
-}
 
-.advantages__list.slick-slider.slick-dotted {
   margin-bottom: 0;
   padding-bottom: 50px;
 }

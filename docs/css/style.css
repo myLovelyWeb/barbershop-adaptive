@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -732,6 +733,58 @@ textarea {
   padding: 0;
   list-style: none; }
 
+.slider__list .slick-dots {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  left: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+
+.slider__list .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer; }
+
+.slider__list .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent; }
+
+.slider__list .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black; }
+
+.slider__list .slick-dots li button:before {
+  font-family: 'slick';
+  line-height: 20px;
+  position: absolute;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.slider__list .slick-dots li button:hover:before,
+.slider__list .slick-dots li button:focus:before {
+  opacity: 1; }
+
 .slider__toggle {
   width: 8px;
   height: 8px;
@@ -768,9 +821,7 @@ textarea {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 120px;
-  padding-right: 120px; }
-
-.advantages__list.slick-slider.slick-dotted {
+  padding-right: 120px;
   margin-bottom: 0;
   padding-bottom: 50px; }
 
@@ -1037,7 +1088,7 @@ textarea {
   font-weight: normal;
   color: #000000; }
 
-.reviews__list.slick-slider.slick-dotted {
+.reviews__list {
   margin-bottom: 0;
   padding-bottom: 50px; }
 
@@ -2030,10 +2081,9 @@ textarea {
     width: 100%;
     margin-top: 35px;
     padding-right: 50px;
+    padding-bottom: 0;
     padding-left: 50px;
     box-shadow: inset 0px 0px 0px 1px #e5ddd5; }
-  .reviews__list.slick-slider.slick-dotted {
-    padding-bottom: 0; }
   .reviews__item {
     min-height: 160px;
     padding-top: 35px;
@@ -2056,6 +2106,19 @@ textarea {
     .reviews__list .slick-arrow:active {
       color: rgba(0, 0, 0, 0.3);
       background-color: #d5c9bd; }
+  .reviews__list .slick-prev,
+  .reviews__list .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent; }
   .reviews__list .slick-prev {
     left: 0; }
   .reviews__list .slick-next {
@@ -2563,6 +2626,7 @@ textarea {
     padding-left: 70px; }
   .reviews__list {
     padding-right: 70px;
+    padding-bottom: 0;
     padding-left: 70px;
     box-shadow: none; }
   .reviews__item {
