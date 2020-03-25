@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.advantages__list').slick({
+  $('.advantages__slider').slick({
     arrows: false,
     dots: true,
     autoplay: false,
@@ -13,7 +13,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.reviews__list').slick({
+  $('.reviews__slider').slick({
     arrows: false,
     dots: true,
     autoplay: false,

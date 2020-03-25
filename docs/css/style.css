@@ -728,32 +728,31 @@ textarea {
   font-weight: normal;
   text-align: right; }
 
-.slider__list {
-  margin: 0;
+.slider {
   padding: 0;
+  padding-bottom: 50px;
   list-style: none; }
 
-.slider__list .slick-dots {
+.slider .slick-dots {
   position: absolute;
-  right: 0;
-  bottom: -25px;
-  left: 0;
+  bottom: 15px;
+  left: 50%;
   display: block;
   padding: 0;
   margin: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   list-style: none;
   text-align: center; }
 
-.slider__list .slick-dots li {
+.slider .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
   margin: 0 5px;
   padding: 0;
   cursor: pointer; }
 
-.slider__list .slick-dots li button {
+.slider .slick-dots li button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -765,24 +764,29 @@ textarea {
   border: 0;
   outline: none;
   background: transparent; }
+  .slider .slick-dots li button::before {
+    font-family: 'slick';
+    line-height: 20px;
+    position: absolute;
+    content: '•';
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    font-size: 0;
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    opacity: .25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .slider .slick-dots li button:hover::before, .slider .slick-dots li button:focus::before {
+    opacity: 1; }
 
-.slider__list .slick-dots li.slick-active button:before {
-  opacity: .75;
-  color: black; }
-
-.slider__list .slick-dots li button:before {
-  font-family: 'slick';
-  line-height: 20px;
-  position: absolute;
-  content: '•';
-  text-align: center;
-  opacity: .25;
+.slider .slick-dots li.slick-active button:before {
   color: black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.slider__list .slick-dots li button:hover:before,
-.slider__list .slick-dots li button:focus:before {
   opacity: 1; }
 
 .slider__toggle {
@@ -817,32 +821,17 @@ textarea {
   .advantages::after {
     background-image: url("../img/angle-dark.svg"); }
 
-.advantages__list {
+.advantages__slider {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 120px;
   padding-right: 120px;
-  margin-bottom: 0;
-  padding-bottom: 50px; }
+  margin: 0 auto; }
 
-.advantages__list .slick-dots {
-  bottom: 15px; }
+.advantages__slider .slick-dots button::before {
+  border: 2px solid #ffffff; }
 
-.advantages__list .slick-dots button {
-  width: 18px;
-  height: 18px; }
-  .advantages__list .slick-dots button::before {
-    top: 5px;
-    left: 5px;
-    width: 8px;
-    height: 8px;
-    border: 2px solid #ffffff;
-    font-size: 0;
-    background-color: transparent;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-
-.advantages__list .slick-dots .slick-active button:before {
+.advantages__slider .slick-dots .slick-active button::before {
   background-color: #ffffff;
   opacity: 1; }
 
@@ -1088,28 +1077,13 @@ textarea {
   font-weight: normal;
   color: #000000; }
 
-.reviews__list {
-  margin-bottom: 0;
-  padding-bottom: 50px; }
+.reviews__slider {
+  margin: 0; }
 
-.reviews__list .slick-dots {
-  bottom: 8px; }
+.reviews__slider .slick-dots button:before {
+  border: 2px solid #000000; }
 
-.reviews__list .slick-dots button {
-  width: 18px;
-  height: 18px; }
-  .reviews__list .slick-dots button:before {
-    top: 5px;
-    left: 5px;
-    width: 8px;
-    height: 8px;
-    border: 2px solid #000000;
-    font-size: 0;
-    background-color: transparent;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-
-.reviews__list .slick-dots .slick-active button:before {
+.reviews__slider .slick-dots .slick-active button:before {
   background-color: #000000;
   opacity: 1; }
 
@@ -1705,7 +1679,7 @@ textarea {
     .stats__header {
       padding-left: 20px;
       padding-right: 20px; }
-    .advantages__list {
+    .advantages__slider {
       padding-left: 20px;
       padding-right: 20px; }
     .news__wrapper {
@@ -1734,7 +1708,7 @@ textarea {
     .stats__header {
       padding-left: 64px;
       padding-right: 64px; }
-    .advantages__list {
+    .advantages__slider {
       padding-left: 64px;
       padding-right: 64px; }
     .news__wrapper {
@@ -2070,20 +2044,19 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
-            justify-content: space-between; }
-  .reviews__title {
-    margin-bottom: 0;
-    padding-top: 10px;
-    font-size: 40px; }
-  .reviews__ghost-btn {
-    display: block; }
-  .reviews__list {
+            justify-content: space-between;
     width: 100%;
     margin-top: 35px;
     padding-right: 50px;
     padding-bottom: 0;
     padding-left: 50px;
     box-shadow: inset 0px 0px 0px 1px #e5ddd5; }
+  .reviews__title {
+    margin-bottom: 0;
+    padding-top: 10px;
+    font-size: 40px; }
+  .reviews__ghost-btn {
+    display: block; }
   .reviews__item {
     min-height: 160px;
     padding-top: 35px;
@@ -2096,18 +2069,18 @@ textarea {
   .reviews__author-image {
     border: none;
     border-radius: 50%; }
-  .reviews__list .slick-arrow {
+  .reviews__slider .slick-arrow {
     display: block;
     width: 50px;
     height: 100%;
     box-shadow: inset 0px 0px 0px 1px #e5ddd5; }
-    .reviews__list .slick-arrow:hover {
+    .reviews__slider .slick-arrow:hover, .reviews__slider .slick-arrow:focus {
       box-shadow: inset 0px 0px 0px 1px #d5c9bd; }
-    .reviews__list .slick-arrow:active {
+    .reviews__slider .slick-arrow:active {
       color: rgba(0, 0, 0, 0.3);
       background-color: #d5c9bd; }
-  .reviews__list .slick-prev,
-  .reviews__list .slick-next {
+  .reviews__slider .slick-prev,
+  .reviews__slider .slick-next {
     font-size: 0;
     line-height: 0;
     position: absolute;
@@ -2119,12 +2092,12 @@ textarea {
     border: none;
     outline: none;
     background: transparent; }
-  .reviews__list .slick-prev {
+  .reviews__slider .slick-prev {
     left: 0; }
-  .reviews__list .slick-next {
+  .reviews__slider .slick-next {
     right: 0; }
-  .reviews__list .slick-prev::before,
-  .reviews__list .slick-next::before {
+  .reviews__slider .slick-prev::before,
+  .reviews__slider .slick-next::before {
     position: absolute;
     content: "";
     width: 12px;
@@ -2134,13 +2107,13 @@ textarea {
             transform: translate(-50%, -50%);
     background-image: url(../img/arrow.svg);
     opacity: 1; }
-  .reviews__list .slick-prev::before {
+  .reviews__slider .slick-prev::before {
     left: 23px; }
-  .reviews__list .slick-next::before {
+  .reviews__slider .slick-next::before {
     left: 19px;
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
-  .reviews__list .slick-dots {
+  .reviews__slider .slick-dots {
     bottom: -12px;
     left: 50%;
     width: auto;
@@ -2148,10 +2121,10 @@ textarea {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     background-color: #f8f5f2; }
-  .reviews__list .slick-dots li {
+  .reviews__slider .slick-dots li {
     margin-right: 12px;
     margin-left: 0; }
-    .reviews__list .slick-dots li:last-child {
+    .reviews__slider .slick-dots li:last-child {
       margin-right: 0; }
   .page-footer {
     padding-top: 50px;
@@ -2455,7 +2428,7 @@ textarea {
     .stats__header {
       padding-left: 120px;
       padding-right: 120px; }
-    .advantages__list {
+    .advantages__slider {
       padding-left: 120px;
       padding-right: 120px; }
     .news__wrapper {
@@ -2578,7 +2551,7 @@ textarea {
   .advantages {
     -webkit-box-pack: center;
             justify-content: center; }
-  .advantages__list {
+  .advantages__slider {
     display: -webkit-box;
     display: flex; }
   .advantages__item {
@@ -2624,13 +2597,13 @@ textarea {
     padding-right: 120px; }
   .reviews__title {
     padding-left: 70px; }
-  .reviews__list {
+  .reviews__slider {
     padding-right: 70px;
     padding-bottom: 0;
     padding-left: 70px;
     box-shadow: none; }
   .reviews__item {
-    padding-right: 6.09%;
+    padding-right: 50px;
     padding-left: 318px;
     box-shadow: inset 0px 0px 0px 1px #e5ddd5; }
   .reviews__author-picture {
@@ -2638,7 +2611,7 @@ textarea {
     left: 0; }
   .reviews__author-image {
     border-radius: 0; }
-  .reviews__list .slick-dots {
+  .reviews__slider .slick-dots {
     bottom: -55px; }
   .page-footer__wrapper {
     -webkit-box-pack: unset;

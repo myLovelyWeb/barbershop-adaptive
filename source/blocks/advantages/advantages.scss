@@ -6,34 +6,19 @@
   }
 }
 
-.advantages__list {
+.advantages__slider {
   @include wrapper();
 
-  margin-bottom: 0;
-  padding-bottom: 50px;
+  margin: 0 auto;
 }
 
-.advantages__list .slick-dots {
-  bottom: 15px;
-}
-
-.advantages__list .slick-dots button {
-  width: 18px;
-  height: 18px;
-
+.advantages__slider .slick-dots button {
   &::before {
-    top: 5px;
-    left: 5px;
-    width: 8px;
-    height: 8px;
     border: 2px solid #ffffff;
-    font-size: 0;
-    background-color: transparent;
-    transform: rotate(45deg);
   }
 }
 
-.advantages__list .slick-dots .slick-active button:before {
+.advantages__slider .slick-dots .slick-active button::before {
   background-color: #ffffff;
   opacity: 1;
 }
@@ -144,12 +129,10 @@
 
 @media (min-width: $desktop-width) {
   .advantages {
-
-
     justify-content: center;
   }
 
-  .advantages__list {
+  .advantages__slider {
     display: flex;
   }
 
