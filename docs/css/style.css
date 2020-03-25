@@ -915,7 +915,6 @@ textarea {
 
 .news__item {
   margin-top: 20px;
-  padding-bottom: 20px;
   border-bottom: 1px solid #e5ddd5; }
   .news__item:first-child {
     margin-top: 0; }
@@ -928,6 +927,7 @@ textarea {
 .news__link {
   display: -webkit-box;
   display: flex;
+  padding-bottom: 20px;
   text-decoration: none; }
 
 .news__date {
@@ -1004,8 +1004,7 @@ textarea {
   color: #6a4d38; }
 
 .news__btn {
-  width: 100%;
-  margin-top: 25px; }
+  width: 100%; }
   .news__btn:not([href]) {
     opacity: 0.3;
     pointer-events: none; }
