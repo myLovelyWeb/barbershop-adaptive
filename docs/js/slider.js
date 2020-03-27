@@ -27,3 +27,11 @@ $(document).ready(function(){
     }]
   });
 });
+
+$(window).on('resize orientationchange', function() {
+  var mySlider = $('.advantages__slider');
+
+  if(!mySlider.hasClass('slick-initialized')){
+    mySlider.slick('resize');
+  }
+});
