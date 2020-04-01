@@ -128,6 +128,15 @@ textarea {
   &:active {
     border: 1px solid #999999;
   }
+
+  &:valid:not(:placeholder-shown) {
+    border: 1px solid green;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border: 1px solid red;
+    outline: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

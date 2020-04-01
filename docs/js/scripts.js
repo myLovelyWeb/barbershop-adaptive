@@ -1,11 +1,11 @@
 'use strict';
 
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
-var linkLogin = document.querySelector('.user-menu__login');
-var modalLogin = document.querySelector('.login');
-var userLogin = modalLogin.querySelector('[name=user-login]');
-var closeLogin = modalLogin.querySelector('.login__close-btn');
+let navMain = document.querySelector('.main-nav');
+let navToggle = document.querySelector('.main-nav__toggle');
+let linkToLogin = document.querySelector('.user-menu__login');
+let login = document.querySelector('.login');
+let loginCloseBtn = login.querySelector('.modal__close-btn');
+let userName = login.querySelector('[name=user-login]');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -19,25 +19,22 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-linkLogin.addEventListener("click", function(event) {
-  event.preventDefault();
-  modalLogin.classList.add("modal--show");
-  userLogin.focus();
+linkToLogin.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  login.classList.remove('visually-hidden');
+  userName.focus();
 });
 
-closeLogin.addEventListener("click", function(event) {
-  event.preventDefault();
-  modalLogin.classList.remove("modal--show");
+loginCloseBtn.addEventListener('click', function(evt) {
+  login.classList.add('visually-hidden');
 });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (modalLogin.classList.contains("modal--show")) {
-      evt.preventDefault();
-      modalLogin.classList.remove("modal--show");
-    }
+function handleKeyDown (evt) {
+  const keyCode = evt.keyCode;
+  if (keyCode === 27) {
+    event.preventDefault();
+    modal.classList.add('visually-hidden');
   }
-});
+}
 
-
-
+document.addEventListener('keydown', handleKeyDown);

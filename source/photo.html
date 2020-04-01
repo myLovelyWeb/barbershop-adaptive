@@ -209,27 +209,29 @@
         </section>
       </div>
     </footer>
-    <section class="login modal">
-      <h2 class="login__title">Личный кабинет</h2>
-      <p class="login__text">Введите свой логин и пароль, чтобы войти</p>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="login-form__user-icon">
-          <input type="text" name="user-login" placeholder="Логин">
-        </label>
-        <label class="login-form__user-password">
-          <input type="password" name="user-password" placeholder="Пароль">
-        </label>
-        <div class="login__info">
-          <label class="checkbox login__checkbox">
-            <input class="visually-hidden" type="checkbox" name="user-remember">
-            <span class="checkbox__indicator"></span>
-            Запомните меня
+    <section class="modal login overlay visually-hidden" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-describedby="loginDesc">
+      <div class="modal__content login__content">
+        <h2 id="loginTitle" class="login__title">Личный кабинет</h2>
+        <p id="loginDesc" class="login__text">Введите свой логин и пароль, чтобы войти</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="login-form__user-icon">
+            <input type="text" pattern="[A-Za-z0-9]{6,20}" title="Логин может содержать в себе от 6 до 20 латинских символов." name="user-login" placeholder="Логин" required>
           </label>
-          <a class="login__restore-link">Я забыл пароль!</a>
-        </div>
-        <button class="btn huge-btn login__btn" type="submit">Войти</button>
-        <button class="btn ghost-btn login__btn login__close-btn" type="button">Закрыть</button>
-      </form>
+          <label class="login-form__user-password">
+            <input type="password" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "Пароль не может быть короче восьми символов и должен содержать хотя бы одну цифру, одну маленькую и одну большую латинскую букву." name="user-password" placeholder="Пароль" required>
+          </label>
+          <div class="login__info">
+            <label class="checkbox login__checkbox">
+              <input class="visually-hidden" type="checkbox" name="user-remember">
+              <span class="checkbox__indicator"></span>
+              Запомните меня
+            </label>
+            <a class="login__restore-link">Я забыл пароль!</a>
+          </div>
+          <button class="btn huge-btn login__btn" type="submit">Войти</button>
+          <button class="btn login__close-btn modal__close-btn" type="button">Закрыть</button>
+        </form>
+      </div>
     </section>
     <script src="js/scripts.min.js"></script>
   </body>

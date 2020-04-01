@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function(){
   $('.advantages__slider').slick({
     arrows: false,

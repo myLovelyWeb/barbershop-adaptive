@@ -1,21 +1,14 @@
-var form = document.querySelector('.order__form');
-var submitForm = form.querySelector('.order__btn');
-var modalSuccess = document.querySelector('.success');
-var closeSuccess = modalSuccess.querySelector('.success__btn');
-var modalFailure = document.querySelector('.failure');
-var closeFailure = modalFailure.querySelector('.failure__btn');
+"use strict";
 
-submitForm.addEventListener("click", function(event) {
-  event.preventDefault();
-  modalSuccess.classList.add("modal--show");
+let form = document.querySelector('.order__form');
+let status = document.querySelector('.status');
+let statusCloseBtn = status.querySelector('.modal__close-btn');
+
+form.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  status.classList.remove('visually-hidden');
 });
 
-closeSuccess.addEventListener("click", function(event) {
-  event.preventDefault();
-  modalSuccess.classList.remove("modal--show");
-});
-
-closeFailure.addEventListener("click", function(event) {
-  event.preventDefault();
-  modalFailure.classList.remove("modal--show");
+statusCloseBtn.addEventListener('click', function() {
+  status.classList.add('visually-hidden');
 });
