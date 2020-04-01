@@ -57,12 +57,12 @@
         <div class="order__wrapper">
           <form class="order__form" action="https://echo.htmlacademy.ru">
             <fieldset class="order__personal-data">
-                <input class="order__personal-item" type="text" name="client-surname" placeholder="Фамилия">
-                <input class="order__personal-item" type="text" name="client-name" placeholder="Имя">
+                <input class="order__personal-item" type="text" pattern="[А-Яа-яЁё]{1,}" title="Пишите, пожалуйста, кириллицей." name="client-surname" placeholder="Фамилия" required>
+                <input class="order__personal-item" type="text" pattern="[А-Яа-яЁё]{1,}" title="Пишите, пожалуйста, кириллицей." name="client-name" placeholder="Имя" required>
                 <input class="order__personal-item" type="text" name="client-patronymic" placeholder="Отчество">
             </fieldset>
             <fieldset class="order__customer-contacts">
-                <input class="order__contacts-item" type="tel" name="client-tel" placeholder="Контактный телефон">
+                <input class="order__contacts-item" type="tel" name="client-tel" placeholder="Контактный телефон" required>
                 <input class="order__contacts-item" type="email" name="client-email" placeholder="Контактный e-mail">
             </fieldset>
             <fieldset class="order__master-info">
@@ -216,7 +216,7 @@
             <input type="text" pattern="[A-Za-z0-9]{6,20}" title="Логин может содержать в себе от 6 до 20 латинских символов." name="user-login" placeholder="Логин" required>
           </label>
           <label class="login-form__user-password">
-            <input type="password" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "Пароль не может быть короче восьми символов и должен содержать хотя бы одну цифру, одну маленькую и одну большую латинскую букву." name="user-password" placeholder="Пароль" required>
+            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title ="Пароль не может быть короче восьми символов и должен содержать хотя бы одну цифру, одну маленькую и одну большую латинскую букву." name="user-password" placeholder="Пароль" required>
           </label>
           <div class="login__info">
             <label class="checkbox login__checkbox">
