@@ -524,8 +524,7 @@ textarea {
   outline: none; }
 
 .page {
-  min-width: 320px;
-  margin: 0 auto; }
+  min-width: 320px; }
 
 .page__top-panel {
   background-color: #f8f5f2; }
