@@ -2086,7 +2086,6 @@ textarea {
     cursor: pointer;
     color: transparent;
     border: none;
-    outline: none;
     background: transparent; }
   .reviews__slider .slick-prev {
     left: 0; }
