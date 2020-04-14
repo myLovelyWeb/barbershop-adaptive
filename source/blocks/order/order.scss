@@ -112,6 +112,16 @@
   line-height: 24px;
 }
 
+@media (min-width: 530px) {
+  .order__add-services-item {
+    width: 50%;
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .order {
     padding-bottom: 75px;
@@ -203,11 +213,6 @@
 
   .order__add-services-item {
     margin-top: 45px;
-    width: 50%;
-
-    &:nth-child(2) {
-      margin-top: 0;
-    }
   }
 
   .order__btn {
