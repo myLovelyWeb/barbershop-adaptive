@@ -1,16 +1,19 @@
 .checkbox {
   display: inline-block;
   position: relative;
+  min-height: 37px;
+  padding-top: 3px;
   padding-right: 5px;
+  padding-bottom: 3px;
   padding-left: 60px;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 30px;
   font-style: normal;
   font-weight: normal;
   cursor: pointer;
 
-  &:hover > .checkbox__box, {
+  &:hover > .checkbox__box {
     border: 1px solid #d5c9bd;
   }
 
@@ -29,10 +32,12 @@
 .checkbox__box {
   position: absolute;
   content: "";
+  top: 50%;
   left: 0;
   width: 36px;
   height: 36px;
   border: 1px solid #e5ddd5;
+  transform: translateY(-50%);
   background-color: #ffffff;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,7 +147,6 @@ textarea {
 
   .checkbox {
     font-size: 24px;
-    line-height: 36px;
   }
 
   .radio {
