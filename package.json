@@ -19,6 +19,7 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "node-normalize-scss": "^8.0.1",
+    "postcss-focus-visible": "^5.0.0",
     "posthtml-include": "^1.3.3",
     "smart-grid": "^2.1.2"
   },
@@ -26,5 +27,6 @@
     "dev": "gulp build && gulp serve",
     "build": "gulp build",
     "start": "gulp start"
-  }
+  },
+  "dependencies": {}
 }

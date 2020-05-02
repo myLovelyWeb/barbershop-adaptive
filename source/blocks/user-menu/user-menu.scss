@@ -39,7 +39,12 @@
     font-size: 0;
   }
 
-  .user-menu__link:hover > svg {
+  .user-menu__link:focus {
+    outline: none;
+  }
+
+  .user-menu__link:hover > svg,
+  .user-menu__link:focus > svg {
     fill: #826550;
     opacity: 1;
   }
@@ -56,7 +61,8 @@
     font-weight: bold;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #000000;
       background-color: #ffffff;
 

@@ -152,6 +152,10 @@
       box-shadow: inset 0px 0px 0px 1px #d5c9bd;
     }
 
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
     &:active {
       color: rgba(0, 0, 0, 0.3);
       background-color: #d5c9bd;

@@ -115,6 +115,10 @@
   font-size: 18px;
   line-height: 24px;
   cursor: pointer;
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 .login__close-btn {

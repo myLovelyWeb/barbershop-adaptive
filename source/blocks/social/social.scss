@@ -18,10 +18,6 @@
 .social__item {
   @include col();
   @include size(4);
-
-  &:not(:first-child) .social__link {
-    border-left: none;
-  }
 }
 
 .social__link {

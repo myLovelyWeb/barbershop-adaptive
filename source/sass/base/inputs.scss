@@ -17,13 +17,6 @@
     border: 1px solid #d5c9bd;
   }
 
-  &:focus-within {
-    outline-color: rgb(77, 144, 254);
-    outline-offset: -2px;
-    outline-style: auto;
-    outline-width: 5px;
-  }
-
   &:active > .checkbox__box {
     background-color: #d5c9bd;
   }
@@ -48,6 +41,10 @@ input[type="checkbox"]:checked + .checkbox__box {
   background-size: 22px 16px;
 }
 
+input[type="checkbox"]:focus + .checkbox__box {
+  background-color: #d5c9bd;
+}
+
 .radio {
   display: inline-block;
   position: relative;
@@ -58,30 +55,30 @@ input[type="checkbox"]:checked + .checkbox__box {
   color: #000000;
   cursor: pointer;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #e5ddd5;
-    border-radius: 50%;
-    background-color: #ffffff;
-    transform: translateX(-50%);
-  }
-
-  &:hover::before {
+  &:hover > .radio__box {
     border: 1px solid #d5c9bd;
   }
 
-  &:active::before {
+  &:active > .radio__box {
     border: none;
     background-color: #d5c9bd;
   }
 }
 
-input[type="radio"]:checked + .radio__indicator {
+.radio__box {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+input[type="radio"]:checked + .radio__box::before {
   position: absolute;
   content: "";
   top: 16px;
@@ -94,20 +91,15 @@ input[type="radio"]:checked + .radio__indicator {
   transform: translateX(-50%);
 }
 
-.radio:hover input[type="radio"]:checked + .radio__indicator {
-  border: 1px solid #d5c9bd;
-}
-
-input[type="radio"]:checked + .radio:hover:after,
-input[type="radio"]:checked + .radio:hover:focus {
-  border: 1px solid #d5c9bd;
-}
-
-input[type="radio"]:checked + .radio:active::after {
+input[type="radio"]:focus + .radio__box::before {
+  border: none;
   background-color: #d5c9bd;
 }
 
-input,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
 textarea {
   padding: 9px 20px;
   border: 1px solid #e5ddd5;
@@ -118,13 +110,17 @@ textarea {
   font-weight: normal;
   background-color: #ffffff;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid #d5c9bd;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border: 1px solid #999999;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:valid:not(:placeholder-shown) {

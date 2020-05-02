@@ -64,6 +64,10 @@
     &:active {
       background-color: #624530;
     }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   .main-nav--closed .main-nav__toggle::before {
@@ -276,6 +280,10 @@
     &:focus {
       color: #826550;
       background-color: #000000;
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &:active {
