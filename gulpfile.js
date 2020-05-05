@@ -140,5 +140,4 @@ gulp.task('grid', function(done) {
 gulp.task('build', gulp.series('clean', 'copy', 'copy:images', 'images',
                                'svg:sprite', 'webp', 'html', 'grid', 'style',
                                'javascript'));
-gulp.task('start', gulp.series('build', 'serve'));
 
