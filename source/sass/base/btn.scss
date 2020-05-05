@@ -63,7 +63,7 @@
     background-color: #6a4d38;
   }
 
-  &:focus {
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 

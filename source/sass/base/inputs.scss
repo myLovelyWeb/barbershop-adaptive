@@ -42,7 +42,14 @@ input[type="checkbox"]:checked + .checkbox__box {
 }
 
 input[type="checkbox"]:focus + .checkbox__box {
-  background-color: #d5c9bd;
+    outline-color: rgb(77, 144, 254);
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
+}
+
+input[type="checkbox"]:focus:not(:focus-visible) + .checkbox__box {
+  outline: none;
 }
 
 .radio {
@@ -91,9 +98,20 @@ input[type="radio"]:checked + .radio__box::before {
   transform: translateX(-50%);
 }
 
+input[type="radio"]:focus + .radio__box {
+  outline-color: rgb(77, 144, 254);
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
 input[type="radio"]:focus + .radio__box::before {
   border: none;
   background-color: #d5c9bd;
+}
+
+input[type="radio"]:focus:not(:focus-visible) + .radio__box {
+  outline: none;
 }
 
 input[type="text"],
@@ -119,7 +137,7 @@ textarea {
     border: 1px solid #999999;
   }
 
-  &:focus {
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 

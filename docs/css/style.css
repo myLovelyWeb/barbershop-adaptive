@@ -381,7 +381,7 @@ input[type="radio"].visually-hidden {
   background-color: #826550; }
   .huge-btn:hover, .huge-btn:focus {
     background-color: #6a4d38; }
-  .huge-btn:focus {
+  .huge-btn:focus:not(.focus-visible) {
     outline: none; }
   .huge-btn:active {
     color: rgba(255, 255, 255, 0.3); }
@@ -426,7 +426,13 @@ input[type="checkbox"]:checked + .checkbox__box {
   background-size: 22px 16px; }
 
 input[type="checkbox"]:focus + .checkbox__box {
-  background-color: #d5c9bd; }
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px; }
+
+input[type="checkbox"]:focus:not(.focus-visible) + .checkbox__box {
+  outline: none; }
 
 .radio {
   display: inline-block;
@@ -469,9 +475,18 @@ input[type="radio"]:checked + .radio__box::before {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
 
+input[type="radio"]:focus + .radio__box {
+  outline-color: #4d90fe;
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px; }
+
 input[type="radio"]:focus + .radio__box::before {
   border: none;
   background-color: #d5c9bd; }
+
+input[type="radio"]:focus:not(.focus-visible) + .radio__box {
+  outline: none; }
 
 input[type="text"],
 input[type="tel"],
@@ -502,11 +517,11 @@ textarea {
   textarea:active,
   textarea:focus {
     border: 1px solid #999999; }
-  input[type="text"]:focus,
-  input[type="tel"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus,
-  textarea:focus {
+  input[type="text"]:focus:not(.focus-visible),
+  input[type="tel"]:focus:not(.focus-visible),
+  input[type="email"]:focus:not(.focus-visible),
+  input[type="password"]:focus:not(.focus-visible),
+  textarea:focus:not(.focus-visible) {
     outline: none; }
   input[type="text"]:valid:not(:placeholder-shown),
   input[type="tel"]:valid:not(:placeholder-shown),
@@ -798,7 +813,6 @@ textarea {
   cursor: pointer;
   color: transparent;
   border: 0;
-  outline: none;
   background: transparent; }
   .slider .slick-dots li button::before {
     font-family: 'slick';
@@ -806,7 +820,7 @@ textarea {
     position: absolute;
     content: '•';
     top: 5px;
-    left: 5px;
+    left: 6px;
     width: 8px;
     height: 8px;
     -webkit-transform: rotate(45deg);
@@ -820,6 +834,8 @@ textarea {
     -moz-osx-font-smoothing: grayscale; }
   .slider .slick-dots li button:hover::before, .slider .slick-dots li button:focus::before {
     opacity: 1; }
+  .slider .slick-dots li button:focus:not(.focus-visible) {
+    outline: none; }
 
 .slider .slick-dots li.slick-active button:before {
   color: black;
@@ -1863,7 +1879,7 @@ textarea {
     .main-nav__page-menu-link:hover, .main-nav__page-menu-link:focus {
       color: #826550;
       background-color: #000000; }
-    .main-nav__page-menu-link:focus {
+    .main-nav__page-menu-link:focus:not(.focus-visible) {
       outline: none; }
     .main-nav__page-menu-link:active {
       color: #ffffff;
@@ -1879,8 +1895,8 @@ textarea {
     padding-top: 24px;
     padding-bottom: 24px;
     font-size: 0; }
-  .user-menu__link:focus {
-    outline: none; }
+    .user-menu__link:focus:not(.focus-visible) {
+      outline: none; }
   .user-menu__link:hover > svg,
   .user-menu__link:focus > svg {
     fill: #826550;

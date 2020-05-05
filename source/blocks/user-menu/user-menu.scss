@@ -37,10 +37,10 @@
     padding-top: 24px;
     padding-bottom: 24px;
     font-size: 0;
-  }
 
-  .user-menu__link:focus {
-    outline: none;
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   .user-menu__link:hover > svg,

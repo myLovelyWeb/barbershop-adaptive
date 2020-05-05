@@ -32,4 +32,3 @@
 ## скрипты:
 - "dev": "gulp build && gulp serve"
 - "build": "gulp build"
-- "start": "gulp start"

@@ -34,7 +34,6 @@
   cursor: pointer;
   color: transparent;
   border: 0;
-  outline: none;
   background: transparent;
 
   &::before {
@@ -43,7 +42,7 @@
     position: absolute;
     content: '•';
     top: 5px;
-    left: 5px;
+    left: 6px;
     width: 8px;
     height: 8px;
     transform: rotate(45deg);
@@ -59,6 +58,10 @@
   &:hover::before,
   &:focus::before {
     opacity: 1;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
   }
 }
 
