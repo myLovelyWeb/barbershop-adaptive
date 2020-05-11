@@ -1,13 +1,13 @@
 @import "normalize";
 @import "base/base.scss";
-@import "grid/smart-grid.scss";
-@import "mixins/wrapper.scss";
 @import "config/variables.scss";
 @import "base/fonts.scss";
 @import "base/btn.scss";
 @import "base/inputs.scss";
-@import "../sass/mixins/modal.scss";
-@import "../sass/mixins/overlay.scss";
+@import "grid/smart-grid.scss";
+@import "mixins/wrapper.scss";
+@import "mixins/modal.scss";
+@import "mixins/overlay.scss";
 @import "../blocks/page/page.scss";
 @import "../blocks/page-header/page-header.scss";
 @import "../blocks/main-nav/main-nav.scss";

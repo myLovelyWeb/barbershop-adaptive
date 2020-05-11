@@ -308,17 +308,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px; }
-
-/*
-.debugGrid {
-  @include debug(rgba(0, 0, 0, 0.4), 1px solid #ff0);
-}
-*/
 @font-face {
   font-family: "PT Sans Narrow";
   font-style: normal;
@@ -537,6 +526,17 @@ textarea {
     border: 1px solid red;
     outline: none; }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 120px; }
+
+/*
+.debugGrid {
+  @include debug(rgba(0, 0, 0, 0.4), 1px solid #ff0);
+}
+*/
 .modal {
   display: -webkit-box;
   display: flex;
@@ -1300,7 +1300,7 @@ textarea {
   right: 20px;
   width: 15px;
   height: 15px;
-  background-image: url(../img/user.svg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cdefs%3E%3Cfilter id='a' x='503.031' y='314' width='15' height='15' filterUnits='userSpaceOnUse'%3E%3CfeFlood result='flood'/%3E%3CfeComposite result='composite' operator='in' in2='SourceGraphic'/%3E%3CfeBlend result='blend' in2='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cpath data-name='User copy 2' d='M509.868 314.227a1.577 1.577 0 00-.721.269 1.75 1.75 0 00-.786.046 1.83 1.83 0 00-1.18 1.619c-.04.395-.05 1.5-.023 2.1.08.356-.2.356-.2.356-.5-.033-.278 1.515-.278 1.515a.814.814 0 00.721.867 3.177 3.177 0 001.287 1.526s0 .616.018 1.072c-.076-.037.26 1.165-2.062 1.5s-2.766 1.077-3.2 1.489-.421 2.41-.421 2.41L518 329s-.112-2-.549-2.417-.915-1.152-3.236-1.489c-2.257-.321-1.886-1.507-1.9-1.578 0-.179.028-.941.028-.941a3.918 3.918 0 001.145-1.61 1.322 1.322 0 00.866-.8s.165-1.564-.364-1.556c0 0-.251.08-.171-.276a9.6 9.6 0 00.014-1.859c-.041-.395.02-1.523-.822-1.681a5.162 5.162 0 00-.931-.041c-.281-.039-.615-.755-1.137-.755z' transform='translate(-503.031 -314)' fill='%23d1d1d1' fill-rule='evenodd' filter='url(%23a)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   z-index: 2; }
 
@@ -1308,10 +1308,10 @@ textarea {
   position: absolute;
   content: "";
   top: 16px;
-  right: 21px;
+  right: 20px;
   width: 15px;
   height: 15px;
-  background-image: url(../img/lock.svg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 17'%3E%3Cdefs%3E%3Cfilter id='a' width='15' height='17' x='503' y='388' filterUnits='userSpaceOnUse'%3E%3CfeFlood result='flood'/%3E%3CfeComposite in2='SourceGraphic' operator='in' result='composite'/%3E%3CfeBlend in2='SourceGraphic' result='blend'/%3E%3C/filter%3E%3C/defs%3E%3Cpath fill='%23d1d1d1' fill-rule='evenodd' d='M516 393.451a5.5 5.5 0 00-5.611-5.451 5.366 5.366 0 00-5.453 5.453h-.63a1 1 0 00-1.258 1.079v9.05a1.048 1.048 0 001.139 1.418h12.568a1.382 1.382 0 001.245-1.42v-8.61a1.343 1.343 0 00-1.247-1.532zm-1.187-.013a4.284 4.284 0 00-8.564 0h8.564zm-4.645 2.036a2.009 2.009 0 011.962 2.053 2.054 2.054 0 01-1.263 1.919c-.1.041.661 3.541.661 3.541l-2.64.019a20.682 20.682 0 00.647-3.535 2.05 2.05 0 01-1.328-1.944 2.009 2.009 0 011.965-2.053z' data-name='Locked 2' filter='url(%23a)' transform='translate(-503 -388)'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   z-index: 2; }
 
@@ -1738,35 +1738,6 @@ textarea {
     width: 50%; }
     .order__add-services-item:nth-child(2) {
       margin-top: 0; } }
-
-@media screen and (min-width: 768px) {
-    .wrapper {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .page__title-wrapper {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .stats__header {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .advantages__slider {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .news__wrapper {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .reviews__wrapper {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .works__review {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .price__wrapper {
-      padding-left: 64px;
-      padding-right: 64px; }
-    .order__wrapper {
-      padding-left: 64px;
-      padding-right: 64px; } }
 
 @media (min-width: 768px) {
   input,
@@ -2235,10 +2206,10 @@ textarea {
   .login__text {
     margin-bottom: 25px; }
   .login-form__user-icon::after {
-    top: 28px;
+    top: 17px;
     right: 26px; }
   .login-form__user-password::after {
-    top: 26px;
+    top: 16px;
     right: 27px; }
   .login__btn {
     width: 100%;
@@ -2248,7 +2219,6 @@ textarea {
     top: 60px;
     right: -105px;
     width: 30px;
-    min-width: 30px;
     height: 30px;
     margin: 0;
     border: 0;
@@ -2258,7 +2228,7 @@ textarea {
       position: absolute;
       content: "";
       top: 14px;
-      left: -4px;
+      left: -3px;
       width: 36px;
       height: 2px;
       background-color: #ffffff; }
@@ -2420,6 +2390,35 @@ textarea {
     width: 460px;
     padding-right: 80px;
     padding-left: 80px; } }
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .page__title-wrapper {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .stats__header {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .advantages__slider {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .news__wrapper {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .reviews__wrapper {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .works__review {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .price__wrapper {
+      padding-left: 64px;
+      padding-right: 64px; }
+    .order__wrapper {
+      padding-left: 64px;
+      padding-right: 64px; } }
 
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
     .page-header__logo {
