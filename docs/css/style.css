@@ -1107,6 +1107,8 @@ textarea {
   margin: 0; }
 
 .reviews__author-image {
+  width: 50px;
+  height: 50px;
   border: 1px solid #e5ddd5; }
 
 .reviews__author-name {
@@ -1216,15 +1218,18 @@ textarea {
   font-size: 0;
   background-repeat: no-repeat;
   background-position: center; }
+  .social__link:not([href]) {
+    opacity: 0.3;
+    pointer-events: none; }
   .social__link--vk {
     background-image: url("../img/vk.png");
     background-size: 23px 26px; }
   .social__link--fb {
     background-image: url(../img/fb.png);
     background-size: 18px 39px; }
-  .social__link--inst {
-    background-image: url("../img/inst.png");
-    background-size: 36px 36px; }
+  .social__link--twitter {
+    background-image: url("../img/twitter.png");
+    background-size: 30px 24px; }
   .social__link:active {
     opacity: 0.3; }
 
@@ -2083,6 +2088,8 @@ textarea {
     top: 40px;
     left: 32px; }
   .reviews__author-image {
+    width: 80px;
+    height: 80px;
     border: none;
     border-radius: 50%; }
   .reviews__slider .slick-arrow {
@@ -2650,6 +2657,8 @@ textarea {
     top: 0;
     left: 0; }
   .reviews__author-image {
+    width: 249px;
+    height: 160px;
     border-radius: 0; }
   .reviews__slider .slick-dots {
     bottom: -55px; }
@@ -2694,7 +2703,7 @@ textarea {
       background-size: 15px 17px; }
     .social__link--fb {
       background-size: 10px 21px; }
-    .social__link--inst {
+    .social__link--twitter {
       background-size: 19px 19px; }
   .works {
     padding-bottom: 90px; }
@@ -2988,7 +2997,7 @@ textarea {
         background-image: url("../img/vk@2x.png"); }
       .social__link--fb {
         background-image: url("../img/fb@2x.png"); }
-      .social__link--inst {
-        background-image: url("../img/inst@2x.png"); }
+      .social__link--twitter {
+        background-image: url("../img/twitter@2x.png"); }
     .works__item--work-of-month .works__img-wrapper::before {
       background-image: url("../img/work-of-month@2x.png"); } }

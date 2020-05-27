@@ -30,6 +30,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  &:not([href]) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   &--vk {
     background-image: url("../img/vk.png");
     background-size: 23px 26px;
@@ -50,13 +55,13 @@
     }
   }
 
-  &--inst {
-    background-image: url("../img/inst.png");
-    background-size: 36px 36px;
+  &--twitter {
+    background-image: url("../img/twitter.png");
+    background-size: 30px 24px;
 
     @media (min-resolution: $retina-dpi),
            (min-resolution: $retina-dppx) {
-      background-image: url("../img/inst@2x.png");
+      background-image: url("../img/twitter@2x.png");
     }
   }
 
@@ -118,7 +123,7 @@
       background-size: 10px 21px;
     }
 
-    &--inst {
+    &--twitter {
       background-size: 19px 19px;
     }
   }
